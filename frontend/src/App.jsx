@@ -22,6 +22,8 @@ const App = () => {
   const [fontSize, setFontSize] = useState(14);
   const [theme, setTheme] = useState("vs-dark");
   const [wordWrap, setWordWrap] = useState("off");
+  const [showCard, setShowCard] = useState(false);
+
 
   const handleIntroComplete = () => {
     setShowIntro(false);
@@ -223,28 +225,7 @@ const App = () => {
           <option value="javascript">JavaScript</option>
         </select>
         <div className="editor-settings">
-          <label>
-            Font Size:
-            <input
-              type="number"
-              value={fontSize}
-              onChange={(e) => setFontSize(Number(e.target.value))}
-            />
-          </label>
-          <label>
-            Theme:
-            <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-              <option value="vs-dark">Dark</option>
-              <option value="vs-light">Light</option>
-            </select>
-          </label>
-          <label>
-            Word Wrap:
-            <select value={wordWrap} onChange={(e) => setWordWrap(e.target.value)}>
-              <option value="off">Off</option>
-              <option value="on">On</option>
-            </select>
-          </label>
+          
         </div>
         <button className="leave-button" onClick={leaveRoom}>
           Leave Room
@@ -274,12 +255,36 @@ const App = () => {
         <button className="run-button" onClick={runCode}>
           Run Code
         </button>
-        <div className=" franklin-gothic-heavy">
+
+        
+         <button className="open-btn" onClick={() => setShowCard(true)}>
+        Show Error
+      </button>
+
+      {showCard && (
+        <div className="card-overlay">
+          <div className="card">
+            <button className="close-btn" onClick={() => setShowCard(false)}>
+              &times;
+            </button>
+             <div className=" franklin-gothic-heavy">
           <h3>This is your mistake:</h3>
-          <pre>{error}</pre>
+          <pre className="pre-error" >{error}</pre>
           <h3>AI Feedback:</h3>
-          <pre>{aiFeedback}</pre>
+          <pre className="pre-ai" >{aiFeedback}</pre>
         </div>
+            
+
+          </div>
+        </div>
+      )}
+    
+
+
+       
+
+
+
       </div>
     </div>
   );
