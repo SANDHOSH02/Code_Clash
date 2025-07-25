@@ -3,6 +3,7 @@ import "./App.css";
 import io from "socket.io-client";
 import Editor from "@monaco-editor/react";
 import Intro from "./Intro.jsx";
+import Ghost from './assets/ghost.mp4'; 
 
 const socket = io("https://realtime-code-editor-zwp3.onrender.com");
 
@@ -23,6 +24,15 @@ const App = () => {
   const [theme, setTheme] = useState("vs-dark");
   const [wordWrap, setWordWrap] = useState("off");
   const [showCard, setShowCard] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowVideo(true);
+  };
+
+  const handleClose = () => {
+    setShowVideo(false);
+  }
 
 
   const handleIntroComplete = () => {
@@ -281,7 +291,19 @@ const App = () => {
     
 
 
-       
+ <button className="trigger-btn" onClick={handleButtonClick}>
+        Don't touch this
+      </button>
+
+       {showVideo && (
+        <div className="video-overlay">
+          <video autoPlay controls className="video-fullscreen">
+            <source src={Ghost} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <button className="close-btn" onClick={() => setShowVideo(false)}>✖</button>
+        </div>
+      )}
 
 
 
