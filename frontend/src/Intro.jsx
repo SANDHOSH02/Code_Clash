@@ -19,7 +19,7 @@ const Intro = ({ onIntroComplete }) => {
 
   return (
     <div className={`intro-container ${animate ? 'animate' : ''}`}>
-      <video
+      {/* <video
         className="background-video"
         autoPlay
         loop
@@ -27,7 +27,7 @@ const Intro = ({ onIntroComplete }) => {
         playsInline
       >
         <source src={backgroundVideo} type="video/mp4" />
-      </video>
+      </video> */}
       <div className="intro-content">
         <h1 className="intro-text">CodeSmart AI Editor</h1>
         <p className="intro-subtext">

@@ -291,7 +291,7 @@ const App = () => {
     
 
 
- <button className="trigger-btn" onClick={handleButtonClick}>
+ {/* <button className="trigger-btn" onClick={handleButtonClick}>
         Don't touch this
       </button>
 
@@ -303,7 +303,7 @@ const App = () => {
           </video>
           <button className="close-btn" onClick={() => setShowVideo(false)}>✖</button>
         </div>
-      )}
+      )} */}
 
 
 
