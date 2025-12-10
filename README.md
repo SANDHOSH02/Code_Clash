@@ -111,8 +111,6 @@ ALTER TABLE problem_results ADD COLUMN submission TEXT DEFAULT NULL;
 ## License
 This project does not include a license file by default. Add a `LICENSE` file (MIT or similar) if you want to open-source it.
 
----
-If you want, I can: add server-side eligibility checks for certificates, store generated certificates on the server, or migrate the editor to Monaco. Tell me which next step you'd like.
 
 ## Screenshots
 
