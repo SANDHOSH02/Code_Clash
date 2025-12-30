@@ -114,9 +114,7 @@ This project does not include a license file by default. Add a `LICENSE` file (M
 
 ## Screenshots
 
-
-
-Below is a simple 3x3 gallery — this will render on GitHub and other Markdown viewers. Replace the files in `ss/` with your actual screenshots.
+Below is a simple 3x3 gallery — this will render on GitHub and other Markdown viewers. Replace the files in `ss/` with your actual  overall screenshots.
 
 <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
 	<img src="Pylab/ss/1.png" alt="Screenshot 1" width="320" />
